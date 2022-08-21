@@ -1,0 +1,8 @@
+module:org.uclouvain.visualsearchtree
+org.uclouvain.visualsearchtree
+org.uclouvain.visualsearchtree.bridge
+org.uclouvain.visualsearchtree.examples
+org.uclouvain.visualsearchtree.server
+org.uclouvain.visualsearchtree.tree
+org.uclouvain.visualsearchtree.tree.events
+org.uclouvain.visualsearchtree.util
