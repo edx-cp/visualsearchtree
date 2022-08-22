@@ -159,7 +159,7 @@ ul.sub-nav-list-small {
 .sub-nav div {
     clear:left;
     float:left;
-    padding:6px;
+    padding:10px;
     text-transform:uppercase;
 }
 .sub-nav .sub-nav-list {
@@ -607,13 +607,19 @@ ul.ui-autocomplete li {
     font-weight:bold;
 }
 #search-input {
-    background-image:url('resources/glass.png');
+    /*background-image:url('resources/glass.png');*/
     background-size:13px;
     background-repeat:no-repeat;
     background-position:2px 3px;
     padding-left:20px;
     width: 250px;
     margin: 0;
+    border: 2px solid #ddd;
+    padding: .5em;
+    outline: none;
+}
+#search-input:focus{
+    border-color: #f8981d;
 }
 #reset-button {
     background-color: transparent;
@@ -626,7 +632,7 @@ ul.ui-autocomplete li {
     height:12px;
     position:absolute;
     right:12px;
-    top:10px;
+    top:18px;
     font-size:0;
 }
 ::placeholder {
@@ -1010,3 +1016,54 @@ pre.snippet .highlighted {
     background-color: #f7c590;
     border-radius: 10%;
 }
+
+
+//====================================
+.btn-list button{
+    color: #555;
+    cursor: default;
+    background-color: #fff;
+    padding: .5em;
+    margin: 0;
+    border: 1px solid transparent !important;
+    cursor: pointer;
+    border-top-left-radius: .3em;
+    border-top-right-radius: .3em;
+    padding: .3em;
+    border-radius: 0;
+    border: none;
+    background: transparent;
+}
+.tab-nav-tools button:hover{
+    color: #f8981d;
+}
+.tab-nav-tools .active{
+    border: 1px solid transparent;
+    border-bottom-color: transparent;
+    background-color: #4d7a97;
+    color:#fff;
+}
+.tab-nav-tools{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.integration-code-content{
+    border: 1px solid #ddd;
+    min-height: 30vh;
+}
+.link-e{
+    text-decoration: none;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.tab-minicp{
+    display: none;
+    padding: .5em;
+}
+.tab-active{
+    display: block;
+}
+//====================================

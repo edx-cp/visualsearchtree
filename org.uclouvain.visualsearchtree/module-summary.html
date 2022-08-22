@@ -14,6 +14,34 @@
 <script type="text/javascript" src="../script.js"></script>
 <script type="text/javascript" src="../script-dir/jquery-3.5.1.min.js"></script>
 <script type="text/javascript" src="../script-dir/jquery-ui.min.js"></script>
+<!-- gCodeIntegrator dependencies -->
+<link href="../resources/gCode-integrator/style.css" rel="stylesheet" />
+<script src="../resources/gCode-integrator/main.js"></script>
+<link href="../resources/gCode-integrator/highlight/dracula.css" rel="stylesheet" />
+<script src="../resources/gCode-integrator/highlight/highlight.min.js"></script>
+<!-- ------ -->
+<style>
+	.btn-list button{
+	    color: #555;
+	    cursor: default;
+	    background-color: #fff;
+	    padding: .5em;
+	    margin: 0;
+	    border: 1px solid transparent !important;
+	    cursor: pointer;
+	    border-top-left-radius: .3em;
+	    border-top-right-radius: .3em;
+	    padding: .3em;
+	    border-radius: 0;
+	    border: none;
+	    background: transparent;
+	}
+	.flex-content-mncp{
+	    display: flex; 
+	    justify-content: space-between;
+	    flex-wrap: wrap;
+	}
+</style>
 </head>
 <body class="module-declaration-page">
 <script type="text/javascript">var pathtoroot = "../";
@@ -78,7 +106,215 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="packages-summary" id="packages-summary">
 <h2>Installation</h2>
-<p>Please check installation step at this link: <a href="https://jitpack.io/#pschaus/visualsearchtree/v1.0" target="_blank">https://jitpack.io/#pschaus/visualsearchtree/v1.0</a></p>
+<div>
+<div class="tab-nav-tools">
+    <div class="btn-list">
+        <button id="tabIntegration1" class="tabBtn active">gradle</button>
+        <button id="tabIntegration2" class="tabBtn ">maven</button>
+        <button id="tabIntegration3" class="tabBtn ">sbt</button>
+        <button id="tabIntegration4" class="tabBtn ">leiningen</button>
+    </div>
+    <div>
+        <a class="link-e flex" href="" target="_blank">
+            <svg style="margin-right: .5em;" width="15" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            See on github
+        </a>
+    </div>
+</div>
+<div class="integration-code-content">
+    <div id="tabIntegration1-CodeSpace" class="tab-minicp tab-active">
+        <div class="flex-centent-mncp" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+            <div>
+                <p><strong>Step 1.</strong> Add the JitPack repository to your build file </p>
+                <div>
+                    <div class="gc gCode-container" >
+                        <p class="gc gCode-language">INTEGRATION CODE</p>
+                        <div class="gc gCode-wrapper">
+                            <pre><code class="gc gCode-cell">
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+                        </code></pre>
+                            <button class="gc gCode-copy-button">Copier</button>
+                        </div>
+                        <span class="gc gCode-copy-success">Code copié</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p><strong>Step 2.</strong> Add the dependency </p>
+                <div>
+                    <div class="gc gCode-container" >
+                        <p class="gc gCode-language">INTEGRATION CODE</p>
+                        <div class="gc gCode-wrapper">
+                            <pre><code class="gc gCode-cell">
+dependencies {
+    implementation 'com.github.pschaus:visualsearchtree:v1.0'
+}
+
+
+
+                        </code></pre>
+                            <button class="gc gCode-copy-button">Copier</button>
+                        </div>
+                        <span class="gc gCode-copy-success">Code copié</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="tabIntegration2-CodeSpace" class="tab-minicp">
+        <div class="flex-centent-mncp" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+            <div>
+                <p><strong>Step 1.</strong> Add the JitPack repository to your build file </p>
+                <div>
+                    <div class="gc gCode-container" >
+                        <p class="gc gCode-language">INTEGRATION CODE</p>
+                        <div class="gc gCode-wrapper">
+                            <pre><code class="gc gCode-cell">
+&lt;repositories&gt;
+    &lt;repository&gt;
+        &lt;id>jitpack.io&lt;/id&gt;
+        &lt;url>https://jitpack.io&lt;/url&gt;
+    &lt;/repository&gt;
+&lt;/repositories&gt;
+                        </code></pre>
+                            <button class="gc gCode-copy-button">Copier</button>
+                        </div>
+                        <span class="gc gCode-copy-success">Code copié</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p><strong>Step 2.</strong> Add the dependency </p>
+                <div>
+                    <div class="gc gCode-container" >
+                        <p class="gc gCode-language">INTEGRATION CODE</p>
+                        <div class="gc gCode-wrapper">
+                            <pre><code class="gc gCode-cell">
+&lt;dependency&gt;
+    &lt;groupId&gt;com.github.pschaus&lt;/groupId&gt;
+    &lt;artifactId&gt;visualsearchtree&lt;/artifactId&gt;
+    &lt;version&gt;v1.0&lt;/version&gt;
+&lt;/dependency&gt;
+
+                        </code></pre>
+                            <button class="gc gCode-copy-button">Copier</button>
+                        </div>
+                        <span class="gc gCode-copy-success">Code copié</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="tabIntegration3-CodeSpace" class="tab-minicp">
+        <div class="flex-centent-mncp" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+            <div>
+                <p><strong>Step 1.</strong> Add the JitPack repository to your build file </p>
+                <div>
+                    <div class="gc gCode-container" >
+                        <p class="gc gCode-language">INTEGRATION CODE</p>
+                        <div class="gc gCode-wrapper">
+                            <pre><code class="gc gCode-cell">
+
+resolvers += "jitpack" at "https://jitpack.io"
+
+                        </code></pre>
+                            <button class="gc gCode-copy-button">Copier</button>
+                        </div>
+                        <span class="gc gCode-copy-success">Code copié</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p><strong>Step 2.</strong> Add the dependency </p>
+                <div>
+                    <div class="gc gCode-container" >
+                        <p class="gc gCode-language">INTEGRATION CODE</p>
+                        <div class="gc gCode-wrapper">
+                            <pre><code class="gc gCode-cell">
+
+libraryDependencies += "com.github.pschaus" % "visualsearchtree" % "v1.0"
+
+                        </code></pre>
+                            <button class="gc gCode-copy-button">Copier</button>
+                        </div>
+                        <span class="gc gCode-copy-success">Code copié</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="tabIntegration4-CodeSpace" class="tab-minicp">
+        <div class="flex-centent-mncp" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+            <div>
+                <p><strong>Step 1.</strong> Add the JitPack repository to your build file </p>
+                <div>
+                    <div class="gc gCode-container" >
+                        <p class="gc gCode-language">INTEGRATION CODE</p>
+                        <div class="gc gCode-wrapper">
+                            <pre><code class="gc gCode-cell">
+
+:repositories [["jitpack" "https://jitpack.io"]]
+
+                        </code></pre>
+                            <button class="gc gCode-copy-button">Copier</button>
+                        </div>
+                        <span class="gc gCode-copy-success">Code copié</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p><strong>Step 2.</strong> Add the dependency </p>
+                <div>
+                    <div class="gc gCode-container" >
+                        <p class="gc gCode-language">INTEGRATION CODE</p>
+                        <div class="gc gCode-wrapper">
+                            <pre><code class="gc gCode-cell">
+
+:dependencies [[com.github.pschaus/visualsearchtree "v1.0"]]	
+
+                        </code></pre>
+                            <button class="gc gCode-copy-button">Copier</button>
+                        </div>
+                        <span class="gc gCode-copy-success">Code copié</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div> 
+<script>
+let tab = document.querySelectorAll('.tabBtn');
+tab.forEach(tabButton => {
+    tabButton.addEventListener('click', (e) => {
+        // hide all block
+        let tabContent = document.querySelectorAll('.tab-minicp');
+        tabContent.forEach(tabContent => {
+            tabContent.style.display="none"
+        });
+
+        // highligh selected tab
+        let tabBtnList = document.querySelectorAll('.tabBtn');
+        tabBtnList.forEach(tabBtn => {
+            tabBtn.classList.remove('active')
+        });
+        document.getElementById(e.target.getAttribute('id')).classList.add('active');
+
+        // display targeted block
+        let targetedBlock = document.getElementById(e.target.getAttribute('id') + '-CodeSpace')
+        if(targetedBlock) {
+            targetedBlock.style.display="block"
+        }
+    });
+});
+</script>
+
+<p>You can also refers to this link to include minicp in your project: <a href="https://jitpack.io/#pschaus/visualsearchtree/v1.0" target="_blank">https://jitpack.io/#pschaus/visualsearchtree/v1.0</a></p>
 <!-- ============ PACKAGES SUMMARY =========== -->
 <h2>Packages</h2>
 <div id="package-summary-table">
