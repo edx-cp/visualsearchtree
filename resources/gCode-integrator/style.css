@@ -12,7 +12,7 @@
     background-color: #871e3d;
 }
 .gCode-container{
-    width: 600px;
+    width: 100%;
     overflow-x: auto;
     position: relative;
     margin: auto;
